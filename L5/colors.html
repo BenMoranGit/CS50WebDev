@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Colors</title>
+        <script>
+ 
+            document.addEventListener('DOMContentLoaded', () => { //=> Shorthand for funtion creation
+
+                document.querySelector('select').onchange = function() {
+                    document.querySelector('#hello').style.color = this.value; //this refers to the dropdown the user selected
+                }
+                // document.querySelectorAll('button').forEach(button => {
+                //     button.onclick = function() {
+                //         document.querySelector('#hello').style.color = button.dataset.color;
+                //     }
+                // }); //Getting all of the buttons on the page as a node list
+            });
+
+        </script>
+    </head>
+    <body>
+        <h1 id="hello">Hello!</h1>
+        <select>
+            <option value="black">Black</option>
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+        </select>
+    </body>
+</html>
